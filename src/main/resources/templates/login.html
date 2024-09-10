@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:c="http://www.w3.org/1999/XSL/Transform">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mofi admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Mofi admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="pixelstrap">
+    <!--<link rel="icon" href="assets/images/favicon.png" type="image/x-icon">-->
+    <!--<link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">-->
+    <title>Login - ABC Credit Co-Operative Socity Ltd. | Nagpur </title>
+    <!-- Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic." crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/font-awesome.css}">
+    <!-- ico-font-->
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/vendors/icofont.css}">
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/vendors/themify.css}">
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/vendors/flag-icon.css}">
+    <!-- Feather icon-->
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/vendors/feather-icon.css}">
+    <!-- Plugins css start-->
+    <!-- Plugins css Ends-->
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/vendors/bootstrap.css}">
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/style.css}">
+    <link id="color" rel="stylesheet" th:href="@{assets/css/color-1.css}" media="screen">
+    <!-- Responsive css-->
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/responsive.css}">
+  </head>
+  <style>
+      .login-card {
+        background-position: center;
+    background: url(assets/images/logindashboardbackground.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+      }
+      /* Style the tab */
+.tabs {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #2a3650;
+}
+
+/* Style the buttons inside the tab */
+.tabs button {
+    color:white;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tabs button:hover {
+    background-color: #ddd;
+    color:black;
+}
+
+/* Create an active/current tablink class */
+.tabs button.active {
+    background-color: #fff;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.logologin h2{
+    margin-top: 5%;
+    color: #030350;
+    font-family: system-ui;
+    font-weight: 700;
+}
+@media (max-width:767px){
+    .logologin h2{
+    margin-top: 10% !important;
+  }
+}
+  </style>
+  <body>
+    <!-- login page start-->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-5"><img class="bg-img-cover bg-center" src="assets/images/logindashboard.png" alt="looginpage"></div>
+        <div class="col-xl-7 p-0">
+          <div class="login-card login-dark">
+              <div>
+              <div>
+                  <div class="row logologin">
+                      <div class="col-lg-3 col-md-3 col-4">
+                           <a class="logo text-start" href="index.php">
+                            <center>  <img class="img-fluid for-light" src="https://demo.vflyorions.in/janta.co.bank/assets/img/newjantalogo.png" alt="looginpage" style="width: 90px;"></center>
+                          <img class="img-fluid for-dark" src="assets/images/logo/logo_dark.png" alt="looginpage"></a>
+                      </div>
+                      <div class="col-lg-9 col-md-9 col-8">
+                              <h2 >
+                  ABC Credit Co. Op. Society</h2>
+                          </div>
+                  </div>
+                  
+                  
+                 
+              
+          
+              </div>
+              <div class="login-main"> 
+                               
+                             
+                                
+                                   <div class="tabs">
+        <button class="tablinks" onclick="openTab(event, 'Tab1')">Main Admin</button>
+        <button class="tablinks" onclick="openTab(event, 'Tab2')">Sub Admin</button>
+        <button class="tablinks" onclick="openTab(event, 'Tab3')">Customer</button>
+    </div>
+
+    <div id="Tab1" class="tabcontent mt-4">
+           <form th:action="@{/login}" method="post" class="theme-form">
+                  <h4>Sign in to Admin account</h4>
+                  <p>Enter your email & password to login</p>
+                  <div class="form-group">
+                    <label class="col-form-label">Email Address</label>
+                    <input class="form-control" type="email" name="username" required="" placeholder="xyz@gmail.com">
+                  </div>
+                  <div class="form-group">
+                    <label class="col-form-label">Password</label>
+                    <div class="form-input position-relative">
+                      <input class="form-control" type="password" name="password" required="" placeholder="*********">
+                      <div class="show-hide"><span class="show">  </span></div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-0">
+                    <div class="checkbox p-0">
+                      <input id="checkbox1" type="checkbox">
+                      
+                    </div><a class="link" href="forget-password.php">Forgot password?</a><br>
+                    <div class="text-end mt-3">
+                      <button class="btn btn-primary btn-block w-100" type="submit">Sign in</button>
+                    </div>
+                  </div>
+                </form>
+    </div>
+
+       <div id="Tab2" class="tabcontent mt-4">
+               <form th:action="@{/login}" method="post" class="theme-form">
+                  <h4>Sign in to Sub Admin account</h4>
+                  <p>Enter your email & password to login</p>
+                  <div class="form-group">
+                    <label class="col-form-label">Email Address</label>
+                    <input class="form-control" type="email" name="username" required="" placeholder="xyz@gmail.com">
+                  </div>
+                  <div class="form-group">
+                    <label class="col-form-label">Password</label>
+                    <div class="form-input position-relative">
+                      <input class="form-control" type="password" name="password" required="" placeholder="*********">
+                      <div class="show-hide"><span class="show">  </span></div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-0">
+                    <div class="checkbox p-0">
+                      <input id="checkbox1" type="checkbox">
+                      
+                    </div><a class="link" href="forget-password.php">Forgot password?</a><br>
+                    <div class="text-end mt-3">
+                      <button class="btn btn-primary btn-block w-100" type="submit">Sign in</button>
+                    </div>
+                  </div>
+                </form>
+    </div>
+
+
+          <div id="Tab3" class="tabcontent mt-4">
+           <form th:action="@{/login}" method="post" class="theme-form">
+                  <h4>Sign in to Customer account</h4>
+                  <p>Enter your email & password to login</p>
+                  <div class="form-group">
+                    <label class="col-form-label">Email Address</label>
+                    <input class="form-control" type="email" name="username" required="" placeholder="xyz@gmail.com">
+                  </div>
+                  <div class="form-group">
+                    <label class="col-form-label">Password</label>
+                    <div class="form-input position-relative">
+                      <input class="form-control" type="password" name="password" required="" placeholder="*********">
+                      <div class="show-hide"><span class="show">  </span></div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-0">
+                    <div class="checkbox p-0">
+                      <input id="checkbox1" type="checkbox">
+                      
+                    </div><a class="link" href="forget-password.php">Forgot password?</a><br>
+                    <div class="text-end mt-3">
+                      <button class="btn btn-primary btn-block w-100" type="submit">Sign in</button>
+                    </div>
+                  </div>
+                </form>
+              <!-- Display error message -->
+              <c:if test="${param.error == 'true'}">
+                  <div class="error">
+                      <p>${param.message}</p>
+                  </div>
+              </c:if>
+    </div>
+
+
+              
+              
+              
+              
+              
+    <script>
+        function openTab(evt, tabName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+    }
+    
+    // By default, open the first tab
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector(".tablinks").click();
+    });
+
+    </script>
+    
+             
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- latest jquery-->
+      <script th:src="@{assets/js/jquery.min.js}"></script>
+      <!-- Bootstrap js-->
+      <script th:src="@{assets/js/bootstrap/bootstrap.bundle.min.js}"></script>
+      <!-- feather icon js-->
+      <script th:src="@{assets/js/icons/feather-icon/feather.min.js}"></script>
+      <script th:src="@{assets/js/icons/feather-icon/feather-icon.js}"></script>
+      <!-- scrollbar js-->
+      <!-- Sidebar jquery-->
+      <script th:src="@{assets/js/config.js}"></script>
+      <!-- Plugins JS start-->
+      <!-- calendar js-->
+      <!-- Plugins JS Ends-->
+      <!-- Theme js-->
+      <script th:src="@{assets/js/script.js}"></script>
+      <script th:src="@{assets/js/script1.js}"></script>
+      <!-- Plugin used-->
+    </div>
+  </body>
+</html>
